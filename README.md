@@ -28,6 +28,9 @@ As a user,
 I should be able to display charts visualizing event details
 So that I can obtain detailed analytics about events to help me better decide which event to go to
 
+Utilization of Serverless functions:
+This meetup app will use serverless functions to access the Google Calendar API, which will provide extensive lists of events to the users (which can then be filtered according to their preferences). Additionally, serverless functions will handle the process of authenticating users before they can access the Google Calendar API. 
+
 
 
 Gherkin Syntax
