@@ -2,9 +2,11 @@ import { render } from '@testing-library/react';
 import App from '../App';
 
 describe('<App /> component', () => {
+
   let AppDOM;
+
   beforeEach(() => {
-    AppDOM = render(<App />).container.firstChild;
+    AppDOM = render(<App/>).container.firstChild;
   })
 
   test('renders list of events', () => {
@@ -14,4 +16,9 @@ describe('<App /> component', () => {
   test('render CitySearch', () => {
     expect(AppDOM.querySelector('#city-search')).toBeInTheDocument();
   });
+
+  test('Number of Events component is rendered correctly', () => {
+    expect(AppDOM.querySelector("#number-of-events")).toBeInTheDocument();
+  });
+
 });
