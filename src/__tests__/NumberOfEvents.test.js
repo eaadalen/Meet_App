@@ -21,10 +21,19 @@ describe("<NumberOfEvents /> component", () => {
       expect(textBox.value).toBe("32");
     });
 
-    test("Number of events are updated as user changes number of events value", async () => {
-      const input = NumberOfEventsComponent.queryByRole("textbox");
-      await userEvent.type(input, "{backspace}{backspace}10");
-      expect(input).toHaveValue("10");
-    });
+});
 
+describe('<NumberOfEvents /> integration', () => {
+
+  let NumberOfEventsComponent;
+  beforeEach(() => {
+    NumberOfEventsComponent = render(<NumberOfEvents setCurrentNOE={() => {}} />);
   });
+
+  test("Number of events are updated as user changes number of events value", async () => {
+    const input = NumberOfEventsComponent.queryByRole("textbox");
+    await userEvent.type(input, "{backspace}{backspace}10");
+    expect(input).toHaveValue("10");
+  });
+  
+});
