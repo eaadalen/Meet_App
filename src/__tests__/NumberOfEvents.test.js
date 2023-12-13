@@ -7,7 +7,7 @@ describe("<NumberOfEvents /> component", () => {
     let NumberOfEventsComponent;
 
     beforeEach(() => {
-      NumberOfEventsComponent = render(<NumberOfEvents setCurrentNOE={() => {}} />);
+      NumberOfEventsComponent = render(<NumberOfEvents setCurrentNOE={() => {}} setErrorAlert={() => { }}/>);
     });
   
     test("Text box rendered successfully", () => {
@@ -27,7 +27,7 @@ describe('<NumberOfEvents /> integration', () => {
 
   let NumberOfEventsComponent;
   beforeEach(() => {
-    NumberOfEventsComponent = render(<NumberOfEvents setCurrentNOE={() => {}} />);
+    NumberOfEventsComponent = render(<NumberOfEvents setCurrentNOE={() => {}} setErrorAlert={() => { }}/>);
   });
 
   test("Number of events are updated as user changes number of events value", async () => {

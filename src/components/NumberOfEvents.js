@@ -1,10 +1,16 @@
 import React from "react";
 
-const NumberOfEvents = ({ setCurrentNOE }) => {
+const NumberOfEvents = ({ setCurrentNOE, setErrorAlert }) => {
 
   const handleInputChanged = (event) => {
     const value = event.target.value;
     setCurrentNOE(value);
+    if (isNaN(value) || value <= 0) {
+      setErrorAlert("Please enter a positive number");
+    } else {
+      setErrorAlert("");
+      setCurrentNOE(value);
+    }
   };
   
   return (
