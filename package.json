@@ -5,6 +5,7 @@
   "homepage": "https://eaadalen.github.io/Meet_App",
   "dependencies": {
     "@babel/plugin-proposal-private-property-in-object": "7.21.11",
+    "@react-hook/resize-observer": "^1.2.6",
     "@testing-library/jest-dom": "^5.17.0",
     "@testing-library/react": "^13.4.0",
     "@testing-library/user-event": "^14.5.1",
@@ -52,6 +53,8 @@
   "devDependencies": {
     "gh-pages": "^6.1.0",
     "jest-cucumber": "^3.0.1",
-    "puppeteer": "^18.1.0"
+    "puppeteer": "^18.1.0",
+    "resize-observer-polyfill": "^1.5.1",
+    "use-resize-observer": "^9.1.0"
   }
 }
